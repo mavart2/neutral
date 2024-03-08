@@ -1,0 +1,605 @@
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  padding-bottom: 6%;
+}
+
+#carrito-icon {
+  width: 20px;
+  height: auto;
+  margin-left: 5px;
+  filter: invert(1);
+  -webkit-filter: invert(1);
+
+}
+
+#cantidadCarrito {
+  background-color: #4E73DF;
+  text-decoration: none;
+  /* Sobrescribe cualquier otro estilo */
+}
+
+.in {
+  margin-top: 0px;
+  padding-top: 7%;
+
+}
+
+
+.hero {
+  text-align: left;
+  padding: 0 32px;
+  min-height: 90vh;
+  background-color: #4E73DF;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title-hero,
+.description-hero {
+  color: white;
+}
+
+.first-title {
+  font-weight: 300;
+  display: block;
+}
+
+.title-hero {
+  margin-bottom: 20px;
+  font-size: 45px;
+  line-height: 55px;
+}
+
+.description-hero {
+  font-weight: 400;
+  opacity: .7;
+  line-height: 28px;
+}
+
+.image-hero {
+  margin-top: 4rem;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .hero {
+
+    padding: 0 6px;
+    /* Ajustar el padding para dispositivos móviles */
+    min-height: auto;
+    /* Eliminar la altura mínima para dispositivos móviles */
+    text-align: center;
+    /* Centrar el texto en dispositivos móviles */
+  }
+
+  .hero .container {
+    padding-right: 15%;
+    padding-bottom: 10%;
+    flex-direction: column;
+    /* Cambiar la dirección de la flexbox a columna */
+    align-items: center;
+    /* Centrar los elementos en dispositivos móviles */
+    justify-content: center;
+    /* Centrar los elementos en dispositivos móviles */
+    max-width: 100%;
+    /* Ajustar el ancho máximo al 100% en dispositivos móviles */
+  }
+
+  .title-hero {
+    padding-left: 10%;
+    padding-top: 20%;
+    font-size: 32px;
+    /* Reducir el tamaño del título en dispositivos móviles */
+    line-height: 40px;
+    /* Ajustar la altura de línea del título en dispositivos móviles */
+    margin-bottom: 10px;
+    /* Reducir el espacio inferior del título en dispositivos móviles */
+  }
+
+  .description-hero {
+    padding-left: 10%;
+    font-size: 16px;
+    /* Reducir el tamaño de la descripción en dispositivos móviles */
+    line-height: 24px;
+    /* Ajustar la altura de línea de la descripción en dispositivos móviles */
+  }
+
+  .image-hero {
+    margin-top: 2rem;
+    /* Reducir el espacio superior de la imagen en dispositivos móviles */
+  }
+}
+
+/* Estilos para tabletas */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero .container {
+    max-width: 90%;
+    /* Reducir el ancho máximo para tabletas */
+  }
+}
+
+
+/* Estilos para el formulario */
+form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-left: 30px;
+}
+
+/* Estilos para las etiquetas */
+label {
+  font-weight: bold;
+}
+
+/* Estilos para los input */
+.form-control {
+  margin-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+/* Estilos para el botón */
+.btn-primary {
+  width: 100%;
+
+}
+
+.btn2 {
+  /*Estiloscomunesparatodoslosbotones*/
+  background-color: #762ef4;
+  color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  /*Espaciadointerno*/
+  font-size: 16px;
+  /*Tamañodefuente*/
+  border: none;
+  /*Sinborde*/
+  border-radius: 5px;
+  /*Borderedondeado*/
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+}
+
+.btn2:hover {
+  /* Estilos cuando el cursor pasa sobre el botón */
+  background-color: #5f08f5;
+  /* Color de fondo ligeramente más oscuro */
+}
+
+/* Estilos para el pequeño texto */
+.form-text {
+  color: #6c757d;
+  /* Color de texto gris */
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #8e8c8c;
+}
+
+.invert-img {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+
+}
+
+
+/* Estilos para el título */
+.title2 {
+  font-size: 24px;
+  /* Tamaño de fuente */
+  margin-bottom: 20px;
+  /* Espaciado inferior */
+}
+
+/* Estilos para el formulario */
+#miFormulario {
+  margin-top: 20px;
+  /* Espaciado superior */
+}
+
+.btns {
+  background-color: #7FC80E;
+  line-height: 65px;
+  height: 65px;
+  padding: 0 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* Estilos para el botón de enviar */
+.btn-success {
+  display: block;
+  /*Mostrarcomobloqueparacentrarhorizontalmente*/
+  width: 100%;
+  /*Anchocompleto*/
+  padding: 10px;
+  /*Espaciadointerno*/
+  border: none;
+  /*Sinborde*/
+  border-radius: 5px;
+  /*Bordesredondeados*/
+  background-color: #28a745;
+  /*Colordefondoverde*/
+  color: #fff;
+  /*Colordeltexto*/
+  font-size: 16px;
+  /*Tamañodefuente*/
+  cursor: pointer;
+  /*Cambiarcursoralpasarsobreelbotón*/
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+
+
+/* Estilos para el contenedor de datos del formulario */
+#datosDelFormulario {
+  margin-top: 20px;
+  /* Espacio superior */
+  color: #ccc;
+  width: 80px;
+  padding: 10px;
+  /* Espaciado interno */
+}
+
+#miFormulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  /* Ajusta este valor según sea necesario */
+}
+
+#miFormulario label {
+  display: inline-block;
+  width: 100px;
+  /* Ancho de los labels */
+  text-align: center;
+  margin-right: 20px;
+  /* Espacio entre el label y el input */
+}
+
+#miFormulario input {
+
+  flex-grow: 1;
+}
+
+#miFormulario button {
+  margin-top: 20px;
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+#miFormulario input[type="text"],
+#miFormulario input[type="tel"],
+#miFormulario input[type="email"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
+}
+
+.text-light {
+  text-align: center;
+  /* Centrar el texto */
+  padding-top: 20px;
+  /* Agregar espacio en la parte superior */
+}
+
+h2 {
+  margin-top: 0;
+  /* Eliminar el margen superior predeterminado */
+}
+
+/* Estilos para la tabla interna */
+.tabla {
+
+  border-radius: 10px;
+  /* Redondear los bordes */
+  overflow: hidden;
+  /* Para asegurarse de que el borde redondeado se aplique correctamente */
+}
+
+#Carrito {
+  display: flex;
+  /* Usa flexbox para centrar el contenido */
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  flex-direction: column;
+  /* Alinea los elementos en columna */
+  background-color: #DDEAFB;
+  padding: 20px;
+
+}
+
+
+/* Estilos para las celdas de la tabla */
+#carrito td {
+  padding: 12px;
+  /* Espaciado interno */
+
+
+}
+
+/* Estilos para el encabezado de la tabla */
+#carrito th {
+  padding: 12px;
+  background-color: #fff;
+  /* Color de fondo del encabezado */
+  color: rgb(2, 2, 2);
+  /* Color de texto del encabezado */
+
+}
+
+/* Estilos para el pie de la tabla */
+#carrito tfoot td {
+  font-weight: bold;
+  background-color: #fff;
+  /* Color de fondo del pie */
+  color: rgb(1, 1, 1);
+  /* Color de texto del pie */
+}
+
+
+.table {
+  width: 80%;
+  justify-content: center;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la tabla de contenidos */
+
+
+.thead {
+  width: 80%;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  padding-top: 5%;
+
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+
+.btn {
+  background-color: rgb(37, 193, 89);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  color: azure;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /*Sombra*/
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: rgb(29, 164, 78);
+  border: 1px solid #ccc;
+  transition: opacity 0.3s ease;
+  outline: none;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+}
+
+.btn-danger {
+  background-color: brown;
+  height: 20pt;
+  width: 20pt;
+  padding: 0px;
+}
+
+/* Estilos para dispositivos móviles y tabletas */
+@media only screen and (max-width: 768px) {
+
+  /* Estilos para dispositivos móviles */
+  .card-container {
+    padding: 5%;
+    /* Ajustar el padding para dispositivos móviles */
+  }
+
+  .card {
+    width: 100%;
+    /* Ajustar el ancho de la tarjeta para ocupar toda la pantalla */
+    margin: 10px auto;
+    /* Centrar las tarjetas */
+  }
+}
+
+/* Estilos adicionales para tabletas */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+  /* Estilos para tabletas */
+  .card-container {
+    padding: 5%;
+    /* Ajustar el padding para tabletas */
+  }
+
+  .card {
+    width: 45%;
+    /* Ajustar el ancho de la tarjeta para tabletas */
+  }
+}
+
+
+
+/* Estilos para los iconos de fontawesome */
+.fab {
+  /* Color del icono */
+  color: #90bdf8;
+  /* Cambia el color a tu preferencia */
+
+  /* Margen entre los iconos */
+  margin: 10px;
+  /* Cambia el valor según sea necesario */
+
+  /* Tamaño del icono */
+  font-size: 4rem;
+  /* Cambia el tamaño a tu preferencia */
+
+}
+
+.text-left {
+  color: #90bdf8;
+  /* Cambia  el color deseado en formato hexadecimal, rgb, rgba, etc. */
+}
+
+.bg-col {
+  background-color: #DDEAFB;
+}
+
+/* Estilos para el modal */
+
+.modal-dialog {
+  max-width: 500px;
+  /* Ancho máximo del modal */
+  margin: 1.75rem auto;
+  /* Margen exterior */
+
+}
+
+.modal-content {
+  text-align: center;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 15px rgba(95, 8, 245, 0.25);
+  background-color: #fff;
+  padding: 20px;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+
+/* Estilos para el contenido del modal */
+#modalBody {
+  color: #333;
+  /* Color del texto */
+}
+
+#modalBody p {
+  margin: 0.5rem 0;
+  /* Margen entre párrafos */
+}
+
+#modalBody strong {
+  font-weight: bold;
+  /* Negrita para los títulos */
+  margin-right: 0.5rem;
+  /* Margen derecho */
+}
+
+
+.modal-header .modal-title {
+  display: flex;
+  /* Usar flexbox para centrar el icono */
+  align-items: center;
+  /* Centrar verticalmente */
+  justify-content: center;
+  /* Centrar horizontalmente */
+  text-align: center;
+  /* Centrar el texto */
+}
+
+.modal-header .modal-title i {
+  font-size: 24px;
+  /* Tamaño del icono */
+  color: #5f08f5;
+  /* Color del icono */
+  margin-right: 10px;
+  /* Espacio entre el icono y el texto */
+
+}
