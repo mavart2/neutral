@@ -57,23 +57,41 @@
       </hgroup>
       <form id="miFormularioPrincipal">
 
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <!-- Contenedor para mostrar los datos del formulario -->
+  <div class="form-field">
+    <label for="email">Email address</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="Enter your email" 
+      required
+    >
+   <!-- {/*<small class="form-text">
+      We'll never share your email with anyone else.
+    </small>*/}-->
+  </div>
 
-      </form>
+  <div class="form-field">
+    <label for="password">Password</label>
+    <input 
+      type="password" 
+      id="password" 
+      name="password" 
+      placeholder="Enter your password"
+      required
+    >
+  </div>
+
+  <div class="form-group form-check"> 
+    <input type="checkbox" class="form-check-input" id="remember"> 
+    <label class="form-check-label" for="remember">Check me out</label>
+   </div>
+
+  <button type="submit">
+    Get Started
+  </button>
+
+</form>
 
     </div>
 
@@ -129,23 +147,26 @@
     <button class="btn btn-secondary mb-4" id="confirmButton">Confirm</button>
 
     <!-- Agrega un ID al formulario -->
-    <form id="miFormulario" style="display: none;">
-      <!-- Formulario -->
-      <form id="miFormulario" style="display: none;">
-        <label for="nombre">Name:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
-        <label for="apellido">Last name:</label>
-        <input type="text" id="apellido" name="apellido" required><br><br>
-        <label for="telefono">Phone:</label>
-        <input type="tel" id="telefono" name="telefono" required><br><br>
-        <label for="correo">Email:</label>
-        <input type="email" id="correo" name="correo" required><br><br>
+   <form id="miFormulario" class="form-compra">
 
-        <!-- HTML del modal -->
-        <button id="openModalBtn" class="btn btn-secondary">Send</button>
-      </form>
+  <label for="nombre">Name</label>
+  <input type="text" id="nombre" name="nombre" required>
 
-    </form>
+  <label for="apellido">Last name</label>
+  <input type="text" id="apellido" name="apellido" required>
+
+  <label for="telefono">Phone</label>
+  <input type="tel" id="telefono" name="telefono" required>
+
+  <label for="correo">Email</label>
+  <input type="email" id="correo" name="correo" required>
+
+  <button type="submit" id="openModalBtn">
+    Send
+  </button>
+
+</form>
+
 
     <!-- Espacio para mostrar los datos capturados <div id="datosDelFormularioCompra"></div>-->
 

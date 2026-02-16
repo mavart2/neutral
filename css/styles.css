@@ -5,6 +5,29 @@ html {
 img {
   padding-bottom: 6%;
 }
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* importante */
+  padding: 15px;
+}
+
+/* Hace que el contenido crezca */
+.card h6,
+.card p {
+  margin-bottom: 10px;
+}
+
+/* Empuja el botón al fondo */
+.card button {
+  margin-top: auto;
+}
+#contenedorMarket {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
 
 #carrito-icon {
   width: 20px;
@@ -28,6 +51,8 @@ img {
 }
 
 
+  /* ===== HERO FORM MODERNO ===== */
+
 .hero {
   text-align: left;
   padding: 0 32px;
@@ -39,40 +64,189 @@ img {
   justify-content: center;
 }
 
+/* CONTENEDOR HERO */
 .hero .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 800px;
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
 }
-
-.title-hero,
-.description-hero {
-  color: white;
+.title-hero{
+  color: #ffffff;
 }
 
-.first-title {
-  font-weight: 300;
+.description-hero{
+  color: #ffffff;
+}
+
+
+/* ===============================
+   HERO FORM MODERNO
+================================= */
+
+#miFormularioPrincipal {
+  width: 100%;
+  max-width: 520px;
+  margin-left: 60px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Labels */
+#miFormularioPrincipal label {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
   display: block;
 }
 
-.title-hero {
-  margin-bottom: 20px;
-  font-size: 45px;
-  line-height: 55px;
+/* Inputs */
+#miFormularioPrincipal input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 18px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
-.description-hero {
-  font-weight: 400;
-  opacity: .7;
-  line-height: 28px;
+/* Focus */
+#miFormularioPrincipal input:focus {
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.4);
 }
 
-.image-hero {
-  margin-top: 4rem;
+/* Checkbox */
+.form-check {
+  margin-bottom: 18px;
 }
+
+.form-check-label {
+  color: #fff;
+  display:block;
+}
+
+/* Botón */
+#miFormularioPrincipal button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #ffffff;
+  color: #4E73DF;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#miFormularioPrincipal button:hover {
+  background: #eaeaea;
+  transform: translateY(-2px);
+}
+/* Fix checkbox alignment */
+/* Contenedor del checkbox */
+/* Contenedor */
+#miFormularioPrincipal .form-check {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  margin: 15px 0 20px 0;
+  padding-left: 0 !important; /* elimina offset bootstrap */
+}
+
+/* Checkbox */
+#miFormularioPrincipal .form-check-input {
+  position: static !important; /* quita position absolute de bootstrap */
+  margin: 0 !important;
+  width: 16px;
+  height: 16px;
+  accent-color: #ffffff;
+  flex-shrink: 0; /* evita que se comprima */
+}
+
+/* Label */
+#miFormularioPrincipal .form-check-label {
+  margin: 0 !important;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+#miFormulario {
+  display: none;
+}
+.form-compra {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* más espacio uniforme */
+}
+
+/* Agrupar cada campo */
+.form-compra .campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Labels */
+.form-compra label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs */
+.form-compra input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.2s ease;
+  box-sizing: border-box; /* 🔥 importante */
+}
+
+/* Focus elegante */
+.form-compra input:focus {
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+/* Botón */
+.form-compra button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgb(37, 193, 89);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.form-compra button:hover {
+  background: rgb(29, 164, 78);
+  transform: translateY(-2px);
+}
+
+
+
 
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 768px) {
@@ -87,7 +261,7 @@ img {
   }
 
   .hero .container {
-    padding-right: 15%;
+    
     padding-bottom: 10%;
     flex-direction: column;
     /* Cambiar la dirección de la flexbox a columna */
@@ -122,6 +296,19 @@ img {
     margin-top: 2rem;
     /* Reducir el espacio superior de la imagen en dispositivos móviles */
   }
+ 
+   #miFormularioPrincipal .form-check {
+    justify-content: center;
+    flex-wrap: nowrap; /* evita que el texto salte arriba */
+  }
+  @media (max-width: 480px) {
+  .form-compra {
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+
 }
 
 /* Estilos para tabletas */
@@ -137,7 +324,7 @@ img {
 form {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   padding: 20px;
   background-color: #f8f9fa;
   border-radius: 5px;
@@ -226,10 +413,7 @@ label {
 }
 
 /* Estilos para el formulario */
-#miFormulario {
-  margin-top: 20px;
-  /* Espaciado superior */
-}
+
 
 .btns {
   background-color: #7FC80E;
@@ -291,51 +475,6 @@ label {
   /* Espaciado interno */
 }
 
-#miFormulario {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  /* Ajusta este valor según sea necesario */
-}
-
-#miFormulario label {
-  display: inline-block;
-  width: 100px;
-  /* Ancho de los labels */
-  text-align: center;
-  margin-right: 20px;
-  /* Espacio entre el label y el input */
-}
-
-#miFormulario input {
-
-  flex-grow: 1;
-}
-
-#miFormulario button {
-  margin-top: 20px;
-}
-
-/* Estilos adicionales para mejorar la apariencia */
-#miFormulario input[type="text"],
-#miFormulario input[type="tel"],
-#miFormulario input[type="email"] {
-  width: 100%;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
-}
 
 .text-light {
   text-align: center;
@@ -450,30 +589,22 @@ h2 {
 }
 
 .btn {
-  background-color: rgb(37, 193, 89);
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 5px;
-  color: azure;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  /*Sombra*/
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  -webkit-border-radius: 5px;
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgb(37, 193, 89);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .btn:hover {
   background-color: rgb(29, 164, 78);
-  border: 1px solid #ccc;
-  transition: opacity 0.3s ease;
-  outline: none;
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  -ms-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
+  /*border: 1px solid #ccc;*/
+  
+  transform: translateY(-2px);
 }
 
 .btn-danger {
@@ -485,6 +616,40 @@ h2 {
 
 /* Estilos para dispositivos móviles y tabletas */
 @media only screen and (max-width: 768px) {
+
+  
+  .hero {
+    padding: 40px 20px;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .hero .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .title-hero {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .description-hero {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #miFormularioPrincipal {
+    margin-left: 0;   /* 👈 esto es clave */
+    margin-top: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 30px;
+  }
+
+
 
   /* Estilos para dispositivos móviles */
   .card-container {
