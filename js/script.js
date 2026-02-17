@@ -6,30 +6,39 @@ document.addEventListener("DOMContentLoaded", function () {
     formulario.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        const valor1 = document.getElementById('exampleInputEmail1').value.trim();
-        const valor2 = document.getElementById('exampleInputPassword1').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
 
-        if (valor1 === '' || valor2 === '') {
+        if (email === '' || password === '') {
             alert('Por favor, complete todos los campos.');
             return;
         }
 
-        localStorage.setItem('email', valor1);
-        localStorage.setItem('password', valor2);
+        localStorage.setItem('email', email);
+        //localStorage.setItem('password', valor2);
 
-        const parrafo1 = document.createElement('p');
+        /*const parrafo1 = document.createElement('p');
         parrafo1.textContent = 'Email: ' + valor1;
 
         const parrafo2 = document.createElement('p');
-        parrafo2.textContent = 'Password: ' + valor2;
+        parrafo2.textContent = 'Password: ' + valor2;*/
 
         const contenedorDatos = document.getElementById('datosDelFormulario');
-        contenedorDatos.innerHTML = '';
+        /*contenedorDatos.innerHTML = '';
         contenedorDatos.appendChild(parrafo1);
         contenedorDatos.appendChild(parrafo2);
 
-        document.getElementById('exampleInputEmail1').value = '';
-        document.getElementById('exampleInputPassword1').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('password').value = '';
+        */
+        contenedorDatos.innerHTML = `
+        <div class="mt-3 d-inline-block px-4 py-2 bg-success text-white rounded shadow-sm">
+        👋 Welcome, ${email}!
+    </div>
+    `;
+
+    formulario.reset();
+        
     });
 
     // Mostrar mensaje de suscripción
@@ -41,6 +50,23 @@ document.addEventListener("DOMContentLoaded", function () {
         inputCorreo.value = '';
         mensajeSuscripcion.textContent = 'We will send you information to: ' + correoElectronico;
     });
+    //
+   /* formSuscripcion.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const correoElectronico = inputCorreo.value.trim();
+
+    if (correoElectronico === '') {
+        mensajeSuscripcion.textContent = 'Please enter a valid email.';
+        return;
+    }
+
+    mensajeSuscripcion.textContent =
+        '✔ We will send you information to: ' + correoElectronico;
+
+    inputCorreo.value = '';
+});*/
+
 
     // Funciones relacionadas con el carrito de compras
     const apiProducto = 'https://fakestoreapi.com/products';
