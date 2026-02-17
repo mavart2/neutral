@@ -5,12 +5,35 @@ html {
 img {
   padding-bottom: 6%;
 }
+
 .card {
   display: flex;
   flex-direction: column;
   height: 100%; /* importante */
   padding: 15px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
 }
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+  transition: transform 0.4s ease;
+}
+.card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+/* zoom suave sin salir de la card */
+.card:hover img {
+  transform: scale(1.08);
+}
+
 
 /* Hace que el contenido crezca */
 .card h6,
@@ -52,8 +75,8 @@ img {
 
 
   /* ===== HERO FORM MODERNO ===== */
-
 .hero {
+  position: relative;
   text-align: left;
   padding: 0 32px;
   min-height: 90vh;
@@ -62,10 +85,29 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+/* overlay degradé irregular desde el centro hacia abajo */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 50% 40%,           /* centro arriba / centro horizontal */
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.12) 25%,
+      rgba(255, 255, 255, 0.05) 50%,
+      transparent 70%
+    );
+  mix-blend-mode: screen;          /* opcional, para mezclar mejor con el azul */
 }
 
 /* CONTENEDOR HERO */
 .hero .container {
+  position: relative; /* para estar sobre el overlay */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -73,13 +115,15 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-.title-hero{
+
+.title-hero {
   color: #ffffff;
 }
 
-.description-hero{
+.description-hero {
   color: #ffffff;
 }
+
 
 
 /* ===============================
@@ -565,35 +609,14 @@ h2 {
 
 }
 
-.card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
-  width: 250px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
 
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px 5px 0 0;
-  -webkit-border-radius: 5px 5px 0 0;
-  -moz-border-radius: 5px 5px 0 0;
-  -ms-border-radius: 5px 5px 0 0;
-  -o-border-radius: 5px 5px 0 0;
-  -webkit-border-radius: 5px 5px 0 0;
-}
 
 .btn {
   margin-top: 10px;
   padding: 12px;
   border: none;
   border-radius: 8px;
-  background: rgb(37, 193, 89);
+  background: #2563eb;
   color: white;
   font-weight: 600;
   cursor: pointer;
@@ -601,7 +624,7 @@ h2 {
 }
 
 .btn:hover {
-  background-color: rgb(29, 164, 78);
+  background-color: #0b4ad1;
   /*border: 1px solid #ccc;*/
   
   transform: translateY(-2px);
